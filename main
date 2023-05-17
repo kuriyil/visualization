@@ -1,0 +1,46 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+ 
+def lineplot():
+    data_a = pd.read_excel("data_a.xlsx")
+    print(data_a)
+    plt.figure()
+    plt.plot(data_a["Time"], data_a["Bhutan"], label="Bhutan")
+    plt.plot(data_a["Time"], data_a["Brazil"], label="Brazil")
+    plt.plot(data_a["Time"], data_a["Cayman islands"], label="Cayman islands")
+    plt.plot(data_a["Time"], data_a["Algeria"], label="Algeria")
+    plt.plot(data_a["Time"], data_a["Andorra"], label="Andorra")
+    plt.xlabel("Time")
+    plt.ylabel("Adolescent fertility rate")
+    plt.legend()
+    plt.show()
+    return
+ 
+ 
+ 
+def piechart():
+    data_b =pd.read_excel("data__b__org.xlsx")
+   print(data_b)
+    plt.figure()
+    plt.pie(data_b["Year[2020]"], labels= data_b["Country"])
+    plt.title("Dealing with construction permits")
+    plt.show()
+    return
+ 
+ 
+ 
+def bargraph():
+    data_c = pd.read_excel("Data__c.xlsx")
+    print(data_c)
+    plt.figure()
+    plt.bar(data_c["Year"], data_c["Country"], label="Country")
+    plt.title("Bar graph of access to electricity")
+    plt.xlabel["Year"]
+    plt.ylabel["Access to electricity"]
+    plt.legend()
+    plt.show()
+    return
+ 
+lineplot()
+piechart()
+bargraph()
